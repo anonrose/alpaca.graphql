@@ -1,9 +1,9 @@
 type Order {
   id: String
   client_order_id: String
-		created_at: String
-		updated_at: String
-		submitted_at: String
+  created_at: String
+  updated_at: String
+  submitted_at: String
   filled_at: String
   expired_at: String
   canceled_at: String

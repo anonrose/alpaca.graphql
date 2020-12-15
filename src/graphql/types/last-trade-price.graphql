@@ -1,0 +1,10 @@
+type LastTradePrice {
+		price: Float
+		size: Int
+		exchange: Int
+		cond1: Int
+		cond2: Int
+		cond3: Int
+		cond4: Int
+		timestamp: Float
+}

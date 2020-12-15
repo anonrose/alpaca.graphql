@@ -1,0 +1,8 @@
+type Quote {
+		t: Int
+		o: Float
+		h: Float
+		l: Float
+		c: Float
+		v: Int
+}

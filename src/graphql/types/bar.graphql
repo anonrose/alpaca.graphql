@@ -1,0 +1,6 @@
+# import Quote from 'quote.graphql'
+
+type Bar {
+	symbol: String
+	quotes: [Quote]
+}

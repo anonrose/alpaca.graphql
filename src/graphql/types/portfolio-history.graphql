@@ -1,5 +1,5 @@
 type PortfolioHistory {
-  timestamp: [Int]
+  timestamp: [Float]
   equity: [Float]
   profit_loss: [Float]
   profit_loss_pct: [Float]

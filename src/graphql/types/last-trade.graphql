@@ -1,0 +1,7 @@
+# import LastTradePrice from 'last-trade-price.graphql'
+
+type LastTrade {
+  status: String
+  symbol: String
+  last: LastTradePrice
+}

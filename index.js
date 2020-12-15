@@ -5,7 +5,7 @@ const { GraphQLFileLoader } = require('@graphql-tools/graphql-file-loader');
 const { loadSchema } = require('@graphql-tools/load');
 const { addResolversToSchema } = require('@graphql-tools/schema');
 let resolvers = require('./src/graphql/resolvers');
-
+const PORT = process.env.PORT || 3000;
 dotenv.config({ path: process.env.NODE_ENV === 'production' ? '.env' : '.env.development' });
 (async () => {
   const schema = await loadSchema('./src/graphql/types/*.graphql', { // load from multiple files using glob
@@ -26,10 +26,10 @@ dotenv.config({ path: process.env.NODE_ENV === 'production' ? '.env' : '.env.dev
 
   app.use('/graphql', graphqlHTTP({
     schema: schemaWithResolvers,
-    graphiql: true,
+    graphiql: !!process.env.SHOW_GRAPHIQL
   }));
 
-  app.listen(process.env.PORT || 3000, () => {
-    console.info('Listening on http://localhost:3000/graphql');
+  app.listen(PORT, () => {
+    console.info(`Listening on ${PORT}`);
   });
 })()

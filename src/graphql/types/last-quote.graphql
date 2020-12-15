@@ -1,0 +1,7 @@
+# import LastQuotePrice from 'last-quote-price.graphql'
+
+type LastQuote {
+  status: String
+  symbol: String
+  last: LastQuotePrice
+}

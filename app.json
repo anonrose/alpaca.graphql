@@ -1,0 +1,8 @@
+{
+  "name": "Alpaca Self Hosted",
+  "description": "Your own instance of a alpaca graphql server",
+  "repository": "https://github.com/anonrose/alpaca.graphql",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "alpaca", "graphql"],
+  "image": "heroku/nodejs"
+}

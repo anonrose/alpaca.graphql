@@ -7,4 +7,7 @@ module.exports = {
   calendar: require('./calendar'),
   clock: require('./clock'),
   portfolio_history: require('./portfolio-history'),
+  bars: require('./bars'),
+  last_quote: require('./last-quote'),
+  last_trade: require('./last-trade')
 }

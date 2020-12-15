@@ -5,23 +5,23 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon ./index.js localhost 3001"
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Baetylus/baetylus.alpaca.git"
+    "url": "git+https://github.com/anonrose/alpaca.graphql.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "engines": {
     "npm": "6.14.4",
     "node": "15.4.0"
   },
   "bugs": {
-    "url": "https://github.com/Baetylus/baetylus.alpaca/issues"
+    "url": "https://github.com/anonrose/alpaca.graphql/issues"
   },
-  "homepage": "https://github.com/Baetylus/baetylus.alpaca#readme",
+  "homepage": "https://github.com/anonrose/alpaca.graphql#readme",
   "dependencies": {
     "@master-chief/alpaca": "^3.3.3",
     "dotenv": "^8.2.0",

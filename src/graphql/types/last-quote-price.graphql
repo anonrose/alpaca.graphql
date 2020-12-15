@@ -1,0 +1,9 @@
+type LastQuotePrice {
+		askprice: Float
+		asksize: Int
+		askexchange: Int
+		bidprice: Float
+		bidsize: Int
+		bidexchange: Int
+		timestamp: Float
+}

@@ -5,14 +5,20 @@
 # import Clock from 'clock.graphql'
 # import Activity from 'activity.graphql'
 # import PortfolioHistory from 'portfolio-history.graphql'
+# import Bar from 'bar.graphql'
+# import LastTrade from 'last-trade.graphql'
+# import LastQuote from 'last-quote.graphql'
 
 type Query {
-  account: Account
-		account_configurations: AccountConfigurations
-		asset(symbol: String): Asset
-		assets(status: String, asset_class: String, id: String): [Asset]
-		calendar(start: String, end: String): [Calendar]
-		clock: Clock
-		activities(activity_type: String, date: String, until: String, after: String, direction: String, page_size: Int, page_token: String): [Activity]
-		portfolio_history(period: String, timeframe: String, date_end: String, extended_hours: Boolean): PortfolioHistory
+	account: Account
+	account_configurations: AccountConfigurations
+	asset(asset_id_or_symbol: String): Asset
+	assets(status: String, asset_class: String): [Asset]
+	calendar(start: String, end: String): [Calendar]
+	clock: Clock
+	activities(activity_type: String, date: String, until: String, after: String, direction: String, page_size: Int, page_token: String): [Activity]
+	portfolio_history(period: String, timeframe: String, date_end: String, extended_hours: Boolean): PortfolioHistory
+	bars(timeframe: String, symbols: [String]!, limit: Int, start: String, end: String, after: String, until: String): [Bar]
+	last_quote(symbol: String): LastQuote
+	last_trade(symbol: String): LastTrade
 }
