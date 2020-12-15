@@ -1,0 +1,6 @@
+type AccountConfigurations {
+  dtbp_check: String
+  no_shorting: Boolean
+  suspend_trade: Boolean
+  trade_confirm_email: String
+}

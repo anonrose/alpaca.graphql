@@ -1,0 +1,16 @@
+type Activity {
+	activity_type: String
+	cum_qty: String
+	leaves_qty: String
+	price: String
+	side: String
+	transaction_time: String
+	order_id: String
+	type: String
+	id: String
+	date: String
+	net_amount: String
+	symbol: String
+	qty: String
+	per_share_amount: String
+}

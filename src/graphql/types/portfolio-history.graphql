@@ -1,0 +1,8 @@
+type PortfolioHistory {
+  timestamp: [Int]
+  equity: [Float]
+  profit_loss: [Float]
+  profit_loss_pct: [Float]
+  base_value: Float
+  timeframe: String
+}

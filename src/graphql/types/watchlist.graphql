@@ -1,0 +1,11 @@
+# import Asset from 'asset.graphql'
+
+
+type Watchlist {
+	account_id: String
+	assets: [Asset]
+	created_at: String
+	id: String
+	name: String
+	updated_at: String
+}

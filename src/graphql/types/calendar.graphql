@@ -1,0 +1,5 @@
+type Calendar {
+  date: String
+  open: String
+  close: String
+}
