@@ -1,0 +1,4 @@
+input StopLossInput {
+	stop_price: Int
+	limit_price: Int
+}

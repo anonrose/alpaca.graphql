@@ -1,0 +1,4 @@
+type CancelOrder {
+	status: String
+	order_id: Int
+}

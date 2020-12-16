@@ -8,6 +8,11 @@
 # import Bar from 'bar.graphql'
 # import LastTrade from 'last-trade.graphql'
 # import LastQuote from 'last-quote.graphql'
+# import Order from 'order.graphql'
+# import StopLossInput from 'stop-loss-input.graphql'
+# import TakeProfitInput from 'take-profit-input.graphql'
+# import CancelOrder from 'cancel-order.graphql'
+# import Watchlist from 'watchlist.graphql'
 
 type Query {
 	account: Account
@@ -21,4 +26,23 @@ type Query {
 	bars(timeframe: String, symbols: [String]!, limit: Int, start: String, end: String, after: String, until: String): [Bar]
 	last_quote(symbol: String): LastQuote
 	last_trade(symbol: String): LastTrade
+	orders(status: String, limit: Int, after: String, until: String, direction: String, nested: Boolean, symbols: String): [Order]
+	order(order_id: String, client_order_id: String): Order
+	watchlist(uuid: String): Watchlist
+	watchlists:[Watchlist]
+}
+
+type Mutation {
+	request_order(symbol: String!, qty: String!, side: String!, type: String!, time_in_force: String!, limit_price: Int!, stop_price: String!, trail_price: String!, trail_percent: String!, extended_hours: Boolean, client_order_id: String, order_class: String, take_profit: TakeProfitInput, stop_loss: StopLossInput): Order
+	replace_order(order_id: String, qty: String, time_in_force: String, limit_price: String, stop_price: String, trail: String, client_order_id: String): Order
+	cancel_order(order_id: String): CancelOrder
+	cancel_all_orders: [CancelOrder]
+	close_position(symbol: String, qty: Float): Order
+	close_all_positions: [CancelOrder]
+	create_watchlist(name: String!, symbols: [String]): Watchlist
+	update_watchlist(uuid: String, name: String, symbols: [String]): Watchlist
+	add_symbol_to_watchlist(uuid: String, name: String, symbols: String): Watchlist
+	delete_watchlist(uuid: String): Int
+	remove_symbol_from_watchlist(uuid: String, symbol: String): Int
+	update_account_configuration(dtbp_check: String, no_shorting: Boolean, suspend_trade: Boolean, trade_confirm_email: String): Int
 }

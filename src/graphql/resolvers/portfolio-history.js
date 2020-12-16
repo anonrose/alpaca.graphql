@@ -1,5 +1,9 @@
 const alpaca = require('../../alpaca')
 
-const portfolio_history = (obj, args, context, info) => alpaca.getPortfolioHistory(args);
+const portfolio_history = (_, args) => alpaca.getPortfolioHistory(args);
 
-module.exports = portfolio_history;
+module.exports = {
+  queries: {
+    portfolio_history
+  }
+};

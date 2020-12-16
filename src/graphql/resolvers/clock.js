@@ -1,5 +1,9 @@
 const alpaca = require('../../alpaca')
 
-const clock = (obj, args, context, info) => alpaca.getClock(args);
+const clock = (_, args) => alpaca.getClock(args);
 
-module.exports = clock;
+module.exports = {
+  queries: {
+    clock
+  }
+};

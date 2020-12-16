@@ -1,3 +1,8 @@
+# import TakeProfit from 'take-profit.graphql'
+# import TakeProfit from 'take-profit.graphql'
+# import StopLoss from 'stop-loss.graphql'
+
+
 type Order {
   id: String
   client_order_id: String
@@ -26,6 +31,9 @@ type Order {
   extended_hours: Boolean
   legs: [Order]
   trail_price: String
-		trail_percent: String
+  trail_percent: String
   hwm: String
+  order_class: String
+  take_profit: TakeProfit
+  stop_loss: StopLoss
 }

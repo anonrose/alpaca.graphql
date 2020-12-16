@@ -1,5 +1,11 @@
 const alpaca = require('../../alpaca')
 
-const asset = (obj, args, context, info) => alpaca.getAsset(args);
+const asset = (_, args) => alpaca.getAsset(args);
+const assets = (_, args) => alpaca.getAssets(args);
 
-module.exports = asset;
+module.exports = {
+  queries: {
+    asset,
+    assets
+  }
+};

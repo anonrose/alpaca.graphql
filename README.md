@@ -5,20 +5,20 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
+ [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/anonrose/alpaca.graphql/tree/main)
+
 
 ### Installation
 
 1. Get your API keys from [https://alpaca.markets/](https://alpaca.markets/)
 
-2. Deploy this repo to heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/anonrose/alpaca.graphql/tree/main)
+2. Deploy this repo to heroku if you want using the above button, or anywhere, this is just an express server
 
 3. Set your env vars:
 	```ALPACA_API_KEY```
 	```ALPACA_API_SECRET```
 
-4. If you want to view the [graphiql](https://github.com/graphql/graphiql) interface, set the ```SHOW_GRAPHIQL``` env var to anything and visit https://*your-app*.herokuapp.com/graphql
+4. If you want to view the [graphiql](https://github.com/graphql/graphiql) interface, set the ```SHOW_GRAPHIQL``` env var to anything and visit the `/graphql` route
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 

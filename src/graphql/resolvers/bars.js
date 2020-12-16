@@ -1,6 +1,6 @@
 const alpaca = require('../../alpaca')
 
-const asset = async (obj, args, context, info) => {
+const bars = async (_, args) => {
   const normalizedBars = [];
   const bars = await alpaca.getBars(args)
 
@@ -10,4 +10,8 @@ const asset = async (obj, args, context, info) => {
   return normalizedBars;
 };
 
-module.exports = asset;
+module.exports = {
+  queries: {
+    bars
+  }
+};

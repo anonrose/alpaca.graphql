@@ -1,0 +1,3 @@
+input TakeProfitInput {
+	limit_price: String
+}

@@ -1,5 +1,9 @@
 const alpaca = require('../../alpaca')
 
-const last_trade = (obj, args, context, info) => alpaca.getLastTrade(args);
+const last_trade = (_, args) => alpaca.getLastTrade(args);
 
-module.exports = last_trade;
+module.exports = {
+  queries: {
+    last_trade
+  }
+};

@@ -1,0 +1,4 @@
+type StopLoss {
+	stop_price: Int
+	limit_price: Int
+}
