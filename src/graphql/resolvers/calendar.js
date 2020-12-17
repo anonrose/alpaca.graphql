@@ -1,6 +1,4 @@
-const alpaca = require('../../alpaca')
-
-const calendar = (_, args) => alpaca.getCalendar(args);
+const calendar = (_, args, context) => context.alpaca.getCalendar(args);
 
 module.exports = {
   queries: {

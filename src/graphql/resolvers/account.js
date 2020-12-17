@@ -1,6 +1,4 @@
-const alpaca = require('../../alpaca')
-
-const account = (_, args) => alpaca.getAccount(args);
+const account = (_, args, context) => context.alpaca.getAccount(args);
 
 module.exports = {
   queries: {

@@ -1,6 +1,4 @@
-const alpaca = require('../../alpaca')
-
-const last_quote = (_, args) => alpaca.getLastQuote(args);
+const last_quote = (_, args, context) => context.alpaca.getLastQuote(args);
 
 module.exports = {
   queries: {

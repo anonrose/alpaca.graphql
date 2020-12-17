@@ -1,7 +1,5 @@
-const alpaca = require('../../alpaca')
-
-const account_configurations = _ => alpaca.getAccountConfigurations();
-const update_account_configuration = (_, args) => alpaca.updateAccountConfigurations(args);
+const account_configurations = (_, args, context) => context.alpaca.getAccountConfigurations();
+const update_account_configuration = (_, args, context) => context.alpaca.updateAccountConfigurations(args);
 
 module.exports = {
   queries: {

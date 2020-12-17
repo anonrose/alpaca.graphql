@@ -1,6 +1,4 @@
-const alpaca = require('../../alpaca')
-
-const activities = async (_, args) => alpaca.getAccountActivities(args)
+const activities = (_, args, context) => context.alpaca.getAccountActivities(args)
 
 module.exports = {
   queries: {

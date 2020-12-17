@@ -33,7 +33,7 @@ type Query {
 }
 
 type Mutation {
-	request_order(symbol: String!, qty: String!, side: String!, type: String!, time_in_force: String!, limit_price: Int!, stop_price: String!, trail_price: String!, trail_percent: String!, extended_hours: Boolean, client_order_id: String, order_class: String, take_profit: TakeProfitInput, stop_loss: StopLossInput): Order
+	request_order(symbol: String, qty: String, side: String, type: String, time_in_force: String, limit_price: String, stop_price: String, trail_price: String, trail_percent: String, extended_hours: Boolean, client_order_id: String, order_class: String, take_profit: TakeProfitInput, stop_loss: StopLossInput): Order
 	replace_order(order_id: String, qty: String, time_in_force: String, limit_price: String, stop_price: String, trail: String, client_order_id: String): Order
 	cancel_order(order_id: String): CancelOrder
 	cancel_all_orders: [CancelOrder]

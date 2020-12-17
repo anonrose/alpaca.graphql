@@ -1,7 +1,5 @@
-const alpaca = require('../../alpaca')
-
-const asset = (_, args) => alpaca.getAsset(args);
-const assets = (_, args) => alpaca.getAssets(args);
+const asset = (_, args, context) => context.alpaca.getAsset(args);
+const assets = (_, args, context) => context.alpaca.getAssets(args);
 
 module.exports = {
   queries: {
