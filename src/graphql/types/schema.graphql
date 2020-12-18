@@ -13,7 +13,7 @@
 # import TakeProfitInput from 'take-profit-input.graphql'
 # import CancelOrder from 'cancel-order.graphql'
 # import Watchlist from 'watchlist.graphql'
-
+# import Position from 'position.graphql'
 type Query {
 	account: Account
 	account_configurations: AccountConfigurations
@@ -30,6 +30,8 @@ type Query {
 	order(order_id: String, client_order_id: String): Order
 	watchlist(uuid: String): Watchlist
 	watchlists:[Watchlist]
+	positions:[Position]
+	position(symbol: String):[Position]
 }
 
 type Mutation {
