@@ -25,7 +25,8 @@ module.exports = {
     ...last_quote.queries,
     ...last_trade.queries,
     ...orders.queries,
-    ...watchlists.queries
+    ...watchlists.queries,
+    ...positions.queries
   },
   Mutation: {
     ...orders.mutations,

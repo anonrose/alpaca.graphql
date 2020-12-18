@@ -26,3 +26,4 @@ type Account {
     trading_blocked: Boolean
     transfers_blocked: Boolean
 }
+
