@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/anonrose/alpaca.graphql#readme",
   "dependencies": {
-    "@master-chief/alpaca": "^3.6.3",
+    "@master-chief/alpaca": "^6.3.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
